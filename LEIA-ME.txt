@@ -1,0 +1,15 @@
+PORTAL DA TURMA DE CIBERSISTEMAS — VISUAL ROXO
+
+Arquivos principais:
+- index.html + style.css + app.js: página inicial com fundo cinza-escuro, raios roxos e dois cartões de acesso.
+- portal.html + portal.css + portal.js: página pública de leitura.
+- login.html + login.css + login.js: página de login administrativa separada.
+- firebase.js: configuração preparada para o Firebase existente site-cibersistemas.
+- manifest.json + service-worker.js + icon.svg: base PWA.
+- senai-logo.svg: representação provisória da marca, não o logo oficial.
+
+ATENÇÃO:
+Esta versão atualiza o visual e a navegação, mas o login ainda é demonstrativo e não autentica no Firebase.
+Não digite sua senha real até a integração do Firebase Authentication na próxima etapa.
+As regras do Firestore estão bloqueadas por padrão e não devem ser usadas como regras finais.
+Para testar, abra a pasta no VS Code e use Live Server (ou hospedagem HTTPS), não file://.

@@ -1,0 +1,18 @@
+{
+  "name": "Portal da Turma de Cibersistemas",
+  "short_name": "Portal da Turma",
+  "description": "Portal público da turma de Cibersistemas",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#191821",
+  "theme_color": "#24212e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Bloqueado por padrão nesta etapa. Não publicar como regras finais.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

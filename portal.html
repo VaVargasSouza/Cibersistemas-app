@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Portal da Turma de Cibersistemas">
+
+    <title>Portal da Turma | Cibersistemas</title>
+
+    <link rel="stylesheet" href="portal.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="./Favicon-Cibersistemas.png" type="image">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="marca">
+            <img src="./SENAI-LOGO.png" alt="Logo SENAI" class="logo">
+            <div>
+                <h1>Portal da Turma</h1>
+                <p>Cibersistemas</p>
+            </div>
+        </div>
+
+        <div class="usuario-area">
+            <span id="emailUsuario">Verificando acesso...</span>
+            <button id="btnSair" class="btn btn-secundario" type="button">
+                Sair
+            </button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="boas-vindas">
+            <span class="etiqueta">SENAI • CIBERSISTEMAS</span>
+            <h2>Bem-vindo ao portal da turma!</h2>
+            <p>Consulte os avisos, os links úteis e a escala de limpeza.</p>
+        </section>
+
+        <section class="painel" id="secaoAvisos">
+            <div class="titulo-secao">
+                <span class="icone">!</span>
+                <div>
+                    <h2>Mural de avisos</h2>
+                    <p>Comunicados importantes da turma.</p>
+                </div>
+            </div>
+
+            <form id="formAviso" class="formulario oculto">
+                <input type="hidden" id="avisoId">
+
+                <label for="tituloAviso">Título do aviso</label>
+                <input id="tituloAviso" maxlength="120" required>
+
+                <label for="textoAviso">Mensagem</label>
+                <textarea id="textoAviso" rows="4" maxlength="3000" required></textarea>
+
+                <div class="acoes-formulario">
+                    <button class="btn btn-laranja" type="submit" id="btnSalvarAviso">
+                        Publicar aviso
+                    </button>
+                    <button class="btn btn-secundario oculto" type="button" id="btnCancelarAviso">
+                        Cancelar edição
+                    </button>
+                </div>
+            </form>
+
+            <p id="mensagemAvisos" class="mensagem" aria-live="polite"></p>
+            <div id="listaAvisos" class="lista-cartoes"></div>
+        </section>
+
+        <section class="painel" id="secaoLinks">
+            <div class="titulo-secao">
+                <span class="icone">↗</span>
+                <div>
+                    <h2>Links úteis</h2>
+                    <p>Sites e materiais importantes para a turma.</p>
+                </div>
+            </div>
+
+            <form id="formLink" class="formulario oculto">
+                <input type="hidden" id="linkId">
+
+                <label for="tituloLink">Nome do link</label>
+                <input id="tituloLink" maxlength="120" required>
+
+                <label for="urlLink">Endereço do site</label>
+                <input id="urlLink" type="url" placeholder="https://exemplo.com" required>
+
+                <label for="descricaoLink">Descrição</label>
+                <textarea id="descricaoLink" rows="2" maxlength="500"></textarea>
+
+                <div class="acoes-formulario">
+                    <button class="btn btn-laranja" type="submit" id="btnSalvarLink">
+                        Salvar link
+                    </button>
+                    <button class="btn btn-secundario oculto" type="button" id="btnCancelarLink">
+                        Cancelar edição
+                    </button>
+                </div>
+            </form>
+
+            <p id="mensagemLinks" class="mensagem" aria-live="polite"></p>
+            <div id="listaLinks" class="lista-cartoes"></div>
+        </section>
+
+        <section class="painel" id="secaoEscala">
+            <div class="titulo-secao">
+                <span class="icone">✓</span>
+                <div>
+                    <h2>Escala de limpeza</h2>
+                    <p>Consulte as equipes anterior, atual e próxima.</p>
+                </div>
+            </div>
+
+            <p id="mensagemEscala" class="mensagem" aria-live="polite"></p>
+            <div id="listaEquipes" class="equipes-grid"></div>
+
+            <div id="acoesEscala" class="acoes-escala oculto">
+                <button id="btnConcluirLimpeza" class="btn btn-laranja" type="button">
+                    Confirmar limpeza concluída
+                </button>
+
+                <button id="btnRegistrarFalta" class="btn btn-secundario" type="button">
+                    Registrar aluno que não limpou
+                </button>
+            </div>
+        </section>
+
+        <section class="painel" id="secaoAdministracao">
+            <div class="titulo-secao">
+                <span class="icone">⚙</span>
+                <div>
+                    <h2>Administração</h2>
+                    <p>Ferramentas disponíveis somente para administradores.</p>
+                </div>
+            </div>
+            <p id="mensagemAdmin" class="mensagem"></p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Portal da Turma de Cibersistemas • SENAI</p>
+    </footer>
+
+    <script type="module" src="portal.js"></script>
+</body>
+</html>

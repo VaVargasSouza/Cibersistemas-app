@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Login | Portal da Turma</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./Favicon-Cibersistemas.png" type="image">
+
+    <script type="module" src="login.js"></script>
+</head>
+
+<body>
+
+    <header class="login-header">
+
+        <a href="index.html" class="back-top">
+            ← Início
+        </a>
+
+        <div class="login-brand">
+            <p class="eyebrow">PORTAL DA TURMA</p>
+
+            <h1>
+                LOGIN
+            </h1>
+        </div>
+
+        <img
+            src="./SENAI-LOGO.png"
+            alt="SENAI Educação"
+        >
+
+    </header>
+
+
+    <main>
+
+        <section class="login-card">
+
+            <div class="lock-icon" aria-hidden="true">
+                🔐
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- LOGIN -->
+            <!-- ========================= -->
+
+            <div id="areaLogin">
+
+                <h2>
+                    Entrar na sua conta
+                </h2>
+
+                <p class="description">
+                    Entre com seu e-mail e sua senha.
+                </p>
+
+
+                <form id="formLogin">
+
+                    <label for="emailAdmin">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailAdmin"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                    >
+
+
+                    <label for="senhaAdmin">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senhaAdmin"
+                        name="password"
+                        autocomplete="current-password"
+                        placeholder="Sua senha"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        id="btnEntrar"
+                    >
+                        Entrar
+                    </button>
+
+
+                    <p
+                        id="mensagemLogin"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <p class="account-option">
+
+                    Ainda não tem uma conta?
+
+                    <button
+                        type="button"
+                        id="btnMostrarCadastro"
+                    >
+                        Criar conta
+                    </button>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- CADASTRO -->
+            <!-- ========================= -->
+
+            <div id="areaCadastro" hidden>
+
+                <h2>
+                    Criar conta
+                </h2>
+
+                <p class="description">
+                    Preencha os campos para cadastrar sua conta.
+                </p>
+
+
+                <form id="formCadastro">
+
+                    <label for="nomeCadastro">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeCadastro"
+                        name="nome"
+                        autocomplete="name"
+                        placeholder="Seu nome"
+                        required
+                    >
+
+
+                    <label for="emailCadastro">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailCadastro"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                    >
+
+
+                    <label for="senhaCadastro">
+                        Criar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senhaCadastro"
+                        name="password"
+                        autocomplete="new-password"
+                        placeholder="Mínimo de 6 caracteres"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        autocomplete="new-password"
+                        placeholder="Digite a senha novamente"
+                        minlength="6"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        id="btnCadastrar"
+                    >
+                        Criar minha conta
+                    </button>
+
+
+                    <p
+                        id="mensagemCadastro"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <p class="account-option">
+
+                    Já tem uma conta?
+
+                    <button
+                        type="button"
+                        id="btnMostrarLogin"
+                    >
+                        Fazer login
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <a
+                class="back-link"
+                href="index.html"
+            >
+                ← Voltar à página inicial
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Portal da Turma de Cibersistemas
+        •
+        SENAI Educação
+    </footer>
+
+</body>
+
+</html>
